@@ -1,0 +1,7 @@
+<app-search (searchText)="filterCards($event)"></app-search>
+
+<div class="card-list">
+  <app-card *ngFor="let card of filteredCards" [id]="card.id" [title]="card.title" [description]="card.description"
+    [img]="card.img" (removeCard)="removeCard($event)">
+  </app-card>
+</div>

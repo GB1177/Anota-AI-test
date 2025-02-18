@@ -1,0 +1,14 @@
+<div class="card" [class.card-hover]="isHovered" (mouseenter)="toggleHover(true)" (mouseleave)="toggleHover(false)">
+  <div class="card-img-container">
+    <img [src]="img" [alt]="title" class="card-img" />
+  </div>
+
+  <div class="card-content">
+    <h3 class="card-title">{{ title }}</h3>
+    <p class="card-description">{{ description }}</p>
+  </div>
+
+  <button class="close-btn" (click)="onDelete()">
+    <img src="../../../assets/images/close-icon.svg" alt="Fechar" class="close-icon" />
+  </button>
+</div>
